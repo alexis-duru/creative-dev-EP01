@@ -1,0 +1,162 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+span {
+    font-family: 'freight';
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('/assets/img/background.jpg');
+    box-sizing: border-box;
+    background-size: cover;
+    color: white;
+}
+
+nav {
+    ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        li {
+            display: flex;
+            margin: 30px;
+            font-family: 'ubuntu';
+            letter-spacing: 5px;
+            font-weight: 200;
+            p {
+                margin: 0 20px;
+                transition: 0.4s;
+                display: flex;
+                align-items: center;
+                &:hover {
+                    color: rgb(220, 220, 109);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+.container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    left:10%;
+    // transform: translateY(-50%);
+    transform: rotate(90deg);
+}
+.txt {
+    white-space: nowrap;
+    font-size: 250px;
+    animation: scrollTxt 25s linear infinite;
+}
+
+.t1 {
+    color: white;
+}
+
+.t2 {
+    color: rgb(220, 220, 109);
+}
+
+@keyframes scrollTxt {
+    0%{
+        transform: translate(-100%, 0);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+}
+
+// CONTAINER 2 //
+
+.container2 {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    transform: rotate(90deg);
+    left:-10%;
+}
+
+.txt2 {
+    white-space: nowrap;
+    font-size: 250px;
+    animation: scrollTxt2 25s linear infinite;
+    opacity: 0.3;
+}
+
+.t3 {
+    color: rgb(220, 220, 109);
+}
+
+.t4 {
+    color: white;
+}
+
+@keyframes scrollTxt2 {
+    0%{
+        transform: translate(0, 0);
+    }
+    100%{
+        transform: translate(-100%, 0);
+    }
+}
+
+// slider //
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+    left: 2.5px;
+    bottom: 2.5px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+input:checked + .slider {
+    background-color: rgb(220, 220, 109);
+
+}
+
+input:checked + .slider:before {
+    transform: translateX(25px);
+    
+
+}
+
+
+
