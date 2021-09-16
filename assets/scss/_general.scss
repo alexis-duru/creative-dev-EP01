@@ -28,8 +28,16 @@ body {
     // background-image: url('/assets/img/background.jpg');
     box-sizing: border-box;
     background-size: cover;
-    color: white;
-    background-color: #333;
+    color: #333;
+    background: white;
+    transition: background 0.5s ease, color 0.5s;
+    
+}
+
+body.dark {
+    color: #fff!important;
+    background: #333!important;
+    transition: background 0.5s ease, color 0.5s;
 }
 
 
@@ -73,7 +81,7 @@ nav {
 }
 
 .t1 {
-    color: white;
+    color: black;
 }
 
 .t2 {
@@ -112,7 +120,7 @@ nav {
 }
 
 .t4 {
-    color: white;
+    color: black;
 }
 
 @keyframes scrollTxt2 {
